@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,100;1,200;1,300&display=swap");
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(194, 193, 193);
+  border-radius: 50px;
+}
+body {
+  margin: 0;
+  background-color: #e5e5e5;
+  font-family: poppins;
+}
+.header {
+  background-color: white;
+  padding: 17px 26px;
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  color: #3498db;
+  font-weight: 600;
+  font-size: 18px;
+  align-items: center;
+  position: absolute;
+  border-bottom: 1px solid #ebeff2;
+  top: 0;
+  width: 97vw;
+  z-index: 1;
+}
+.header__logo {
+  color: #3498db;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+.header__icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header__user-icon {
+  padding-right: 11px;
+}
+.sidebar {
+  float: left;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  color: #34495e;
+  white-space: nowrap;
+  border-bottom: 1px solid #ecf0f1;
+  width: 256px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 8px 0 rgba(0, 0, 0, 0.21);
+  display: flex;
+  flex-direction: column;
+  transition: 0.6s;
+}
+.sidebar.close {
+  width: 70px;
+}
+.svg__hidden {
+  display: none;
+}
+.header__logo.sidebar-header {
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+.sidebar.close .svgclose {
+  transform: rotate(-180deg);
+  transition: 0.5s;
+}
+.sidebar.close .menu-item__text {
+  opacity: 0;
+}
+.menu-item {
+  padding-left: 25px;
+  display: flex;
+  gap: 65px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  color: #34495e;
+}
+.sidebar__contracts {
+  border-bottom: 1px solid #ecf0f1;
+}
+.sidebar__Logout.menu-item {
+  padding-top: 24px;
+}
+
+.sidebar__bottom.menu-item {
+  flex-direction: column;
+  padding-left: 0px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover .svg {
+  fill: #3498db;
+}
+a:hover .menu-item__text {
+  color: #3498db;
+}
+.svg {
+  fill: #7f8c8d;
+  height: 21px;
+  width: 22px;
+}
+.svg:hover {
+  fill: #3498db;
+  cursor: pointer;
+}
+
+a.selected {
+  color: #3498db;
+}
+
+a:hover .svg {
+  fill: #3498db;
+}
+.save-contracts-btn:hover .svg,
+.cancel-contracts-btn:hover .svg {
+  fill: #3498db;
+}
+.save-contracts-btn:hover,
+.cancel-contracts-btn:hover {
+  color: #3498db;
+  cursor: pointer;
+}
+
+a:hover .menu-item-text {
+  color: #3498db;
+}
+.svg {
+  fill: #7f8c8d;
+  height: 21px;
+  width: 22px;
+}
+a.selected .svg {
+  fill: #3498db;
+}
+a.selected {
+  color: #3498db;
+}
+main {
+  overflow: hidden;
+  display: block;
+  padding-top: 75px;
+}
+.container {
+  margin-right: 20px;
+}
+.contracts-content {
+  margin-left: 10px;
+}
+.contracts-header {
+  color: #7f8c8d;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+.contracts-icons {
+  display: flex;
+  gap: 10px;
+}
+
+img {
+  width: 100%;
+  height: 85%;
+}
+
+.svg__hidden {
+  display: none;
+}
+.cancel-contracts-btn {
+  border-right: 1px solid grey;
+}
+.contracts-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.contracts-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.card-header-title {
+  font-size: 15px;
+  font-weight: 600;
+  width: 372px;
+}
+.card-header-progress {
+  color: white;
+  font-weight: 600;
+  font-size: 11px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+
+  width: 62px;
+  height: 0px;
+}
+.svg-products {
+  width: 20px;
+  height: 20px;
+  fill: #7f8c8d;
+}
+a:hover .svg-products {
+  fill: #3498db;
+}
+a:hover .menu-item-text {
+  color: #3498db;
+}
+.progress,
+.building,
+.signed {
+  cursor: pointer;
+}
+.progress {
+  background-color: #f39c12;
+}
+.signed {
+  background-color: #2ecc71;
+}
+.building {
+  background-color: #e74c3c;
+}
+.progress:hover {
+  transition: 0.5s;
+  background-color: #ff9500;
+}
+.signed:hover {
+  transition: 0.5s;
+  background-color: #14e77e;
+}
+.building:hover {
+  transition: 0.5s;
+  background-color: #ff1900;
+}
+.contracts-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 12px;
+}
+.item-label {
+  opacity: 0.5;
+}
+.item-content {
+  opacity: 1;
+  padding-left: 10px;
+}
+.card-other-details {
+  color: #7f8c8d;
+}
+.item-label {
+  opacity: 0.5;
+}
+.item-content {
+  opacity: 1;
+  padding-left: 10px;
+  color: #7f8c8d;
+}
+.red {
+  color: #e74c3c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.blue {
+  color: #3498db;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.dot-icon {
+  position: absolute;
+  right: 18px;
+  bottom: 25px;
+  height: 4px;
+  width: 16px;
+}
+.user-icon-holder {
+  display: flex;
+  padding-top: 10px;
+  align-items: center;
+}
+.userIcon {
+  border-radius: 50px;
+  width: 32px;
+  height: 33px;
+}
+.userName {
+  padding-left: 10px;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  padding: 15px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: 0.5s;
+}
+.top {
+  top: 50%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.contracts-icon {
+  width: 20px;
+  height: 20px;
+  padding-left: 5px;
+}
+.add-contracts-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.save-contracts-btn,
+.cancel-contracts-btn,
+.add-contracts-buttons {
+  display: flex;
+}
+.save-contracts-btn,
+.cancel-contracts-btn {
+  padding: 5px;
+}
+input {
+  width: 510px;
+  padding: 10px;
+}
+.field-container {
+  margin-bottom: 13px;
+}
+.card-other-details > p {
+  padding-bottom: 12px;
+}
+.svg_s {
+  height: 12px;
+}
+aside:hover > a,
+aside:hover > .sidebar__bottom > a {
+  opacity: 0.4;
+}
+aside:hover > a:hover,
+aside:hover > .sidebar__bottom > a:hover {
+  opacity: 1;
+}
+.header__user-icon:hover {
+  opacity: 0.6;
+  cursor:pointer
+}

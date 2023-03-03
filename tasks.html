@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="/styles/tasks.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__logo">Feature Tester</div>
+      <div class="header__icons">
+        <div class="header__notification-icon">
+          <a href="#">
+            <svg class="svg">
+              <use xlink:href="#notification__icon"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__user-icon">
+          <img src="/images/avatar.png" alt="avatar">
+        </div>
+      </div>
+    </div>
+    <aside class="sidebar close">
+      <p class="header__logo sidebar-header">FT</p>
+      <a href="dashboard.html" class="sidebar__dashboard menu-item ">
+        <div class="menu-item__logo">
+          <svg class="svg">
+            <use xlink:href="#dashboard__icon"></use>
+          </svg>
+        </div>
+        <div class="menu-item__text">Dashboard</div>
+      </a>
+      <a href="#" class="sidebar__tasks menu-item selected">
+        <div class="menu-item__logo">
+          <svg class="svg">
+            <use xlink:href="#tasks__icon"></use>
+          </svg>
+        </div>
+        <div class="menu-item__text">Tasks</div>
+      </a>
+      <a href="products.html" class="sidebar__products menu-item ">
+        <div class="menu-item__logo">
+          <svg class="svg">
+            <use xlink:href="#products__icon"></use>
+          </svg>
+        </div>
+        <div class="menu-item__text">Products</div>
+      </a>
+      <a href="contracts.html" class="sidebar__contracts menu-item">
+        <div class="menu-item__logo">
+          <svg class="svg">
+            <use xlink:href="#contracts__icon"></use>
+          </svg>
+        </div>
+        <div class="menu-item__text">Contracts</div>
+      </a>
+      <div class="sidebar__bottom menu-item">
+        <a href="login.html" class="sidebar__Logout menu-item">
+          <div class="menu-item__logo">
+            <svg class="svg">
+              <use xlink:href="#logout__icon"></use>
+            </svg>
+          </div>
+          <div class="menu-item__text">Log Out</div>
+        </a>
+        <a href="#" class="sidebar__toggle menu-item" onclick="toggleMenu()">
+          <div class="menu-item__logo">
+            <svg class="svg svgclose svg_s">
+              <use xlink:href="#toggle__icon"></use>
+            </svg>
+          </div>
+          <div class="menu-item__text">Toggle Sidebar</div>
+        </a>
+      </div>
+    </aside>
+    <main class="container">
+      <div class="tasks-content">
+        <div class="tasks-header">
+          <div class="tasks-breadcrumps"></div>
+          <div class="tasks-icons">
+            <a href="#" class="add-tasks">
+              <svg class="tasks-toolbar">
+                <use xlink:href="#add__icon"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg class="tasks-toolbar">
+                <use xlink:href="#search__icon"></use>
+              </svg>
+            </a>
+            <a href="#" class="sort-button">
+              <svg class="tasks-toolbar">
+                <use xlink:href="#sort__icon"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg class="tasks-toolbar">
+                <use xlink:href="#filter__icon"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="tasks-section"></div>
+        <div class="modal">
+          <div class="add-tasks-header">
+            <div class="add-tasks-title">New Contract</div>
+            <div class="add-tasks-buttons">
+              <span class="cancel-tasks-btn close-modal"
+                >Cancel
+                <svg class="tasks-icon svg">
+                  <use xlink:href="#cancel__contracts"></use>
+                </svg>
+              </span>
+              <span class="save-tasks-btn"
+                >Save
+                <svg class="tasks-icon svg">
+                  <use xlink:href="#save__contracts"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="add-tasks-form">
+            <div class="field-tasks"><input type="text" placeholder="Contract Name">
+            </div>
+            <div class="field-container">
+           <input type="text" placeholder="Company Name"></div>
+           <div class="field-container"><input type="text" placeholder="Address"></div>
+           <div class="field-container"> <input type="text" placeholder="Conditions"></div>
+           <div class="field-container">  <input type="text" placeholder="Assignee"></div>
+          </div>
+
+        </div>
+        <div class="overlay hidden"></div>
+      </div>
+    </main>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 16 20"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="notification__icon" width="16" height="20">
+        <path
+          d="M8 20C9.1 20 10 19.1 10 18H6C6 19.1 6.9 20 8 20ZM14 14V9C14 5.93 12.37 3.36 9.5 2.68V2C9.5 1.17 8.83 0.5 8 0.5C7.17 0.5 6.5 1.17 6.5 2V2.68C3.64 3.36 2 5.92 2 9V14L0 16V17H16V16L14 14ZM12 15H4V9C4 6.52 5.51 4.5 8 4.5C10.49 4.5 12 6.52 12 9V15Z"
+        />
+      </symbol>
+    </svg>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 18 18"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="dashboard__icon" width="18" height="18">
+        <path
+          d="M16 2V4H12V2H16ZM6 2V8H2V2H6ZM16 10V16H12V10H16ZM6 14V16H2V14H6ZM18 0H10V6H18V0ZM8 0H0V10H8V0ZM18 8H10V18H18V8ZM8 12H0V18H8V12Z"
+        />
+      </symbol>
+    </svg>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 19 16"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="tasks__icon" width="19" height="16">
+        <path
+          d="M2 6.5C1.17 6.5 0.5 7.17 0.5 8C0.5 8.83 1.17 9.5 2 9.5C2.83 9.5 3.5 8.83 3.5 8C3.5 7.17 2.83 6.5 2 6.5ZM2 0.5C1.17 0.5 0.5 1.17 0.5 2C0.5 2.83 1.17 3.5 2 3.5C2.83 3.5 3.5 2.83 3.5 2C3.5 1.17 2.83 0.5 2 0.5ZM2 12.5C1.17 12.5 0.5 13.18 0.5 14C0.5 14.82 1.18 15.5 2 15.5C2.82 15.5 3.5 14.82 3.5 14C3.5 13.18 2.83 12.5 2 12.5ZM5 15H19V13H5V15ZM5 9H19V7H5V9ZM5 1V3H19V1H5Z"
+        />
+      </symbol>
+    </svg>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 19 16"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="products__icon" width="20" height="18">
+        <path
+          d="M19.9 5.89L18.85 1.52C18.63 0.62 17.85 0 16.94 0H3.05001C2.15001 0 1.36001 0.63 1.15001 1.52L0.100007 5.89C-0.139993 6.91 0.0800067 7.95 0.720007 8.77C0.800007 8.88 0.910007 8.96 1.00001 9.06V16C1.00001 17.1 1.90001 18 3.00001 18H17C18.1 18 19 17.1 19 16V9.06C19.09 8.97 19.2 8.88 19.28 8.78C19.92 7.96 20.15 6.91 19.9 5.89ZM16.91 1.99L17.96 6.36C18.06 6.78 17.97 7.2 17.71 7.53C17.57 7.71 17.27 8 16.77 8C16.16 8 15.63 7.51 15.56 6.86L14.98 2L16.91 1.99ZM11 2H12.96L13.5 6.52C13.55 6.91 13.43 7.3 13.17 7.59C12.95 7.85 12.63 8 12.22 8C11.55 8 11 7.41 11 6.69V2ZM6.49001 6.52L7.04001 2H9.00001V6.69C9.00001 7.41 8.45001 8 7.71001 8C7.37001 8 7.06001 7.85 6.82001 7.59C6.57001 7.3 6.45001 6.91 6.49001 6.52ZM2.04001 6.36L3.05001 2H5.02001L4.44001 6.86C4.36001 7.51 3.84001 8 3.23001 8C2.74001 8 2.43001 7.71 2.30001 7.53C2.03001 7.21 1.94001 6.78 2.04001 6.36ZM3.00001 16V9.97C3.08001 9.98 3.15001 10 3.23001 10C4.10001 10 4.89001 9.64 5.47001 9.05C6.07001 9.65 6.87001 10 7.78001 10C8.65001 10 9.43001 9.64 10.01 9.07C10.6 9.64 11.4 10 12.3 10C13.14 10 13.94 9.65 14.54 9.05C15.12 9.64 15.91 10 16.78 10C16.86 10 16.93 9.98 17.01 9.97V16H3.00001Z"
+        />
+      </symbol>
+    </svg>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 20 19"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="contracts__icon" width="20" height="19">
+        <path
+          d="M12 4V2H8V4H12ZM2 6V17H18V6H2ZM18 4C19.11 4 20 4.89 20 6V17C20 18.11 19.11 19 18 19H2C0.89 19 0 18.11 0 17L0.00999999 6C0.00999999 4.89 0.89 4 2 4H6V2C6 0.89 6.89 0 8 0H12C13.11 0 14 0.89 14 2V4H18Z"
+        />
+      </symbol>
+    </svg>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 18 18"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="logout__icon" width="18" height="18">
+        <path
+          d="M14 5L12.59 6.41L14.17 8H6V10H14.17L12.59 11.58L14 13L18 9L14 5ZM2 2H9V0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H9V16H2V2Z"
+        />
+      </symbol>
+    </svg>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 18 12"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="toggle__icon" width="18" height="12">
+        <path d="M7.41 1.41L6 0L0 6L6 12L7.41 10.59L2.83 6L7.41 1.41Z" />
+      </symbol>
+    </svg>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 14 14"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="add__icon" width="14" height="14">
+        <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
+      </symbol>
+    </svg>
+
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 18 18"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="search__icon" width="18" height="18">
+        <path
+          d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11V11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z"
+        />
+      </symbol>
+    </svg>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 18 12"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="sort__icon" width="18" height="12">
+        <path d="M0 12H6V10H0V12ZM0 0V2H18V0H0ZM0 7H12V5H0V7Z" />
+      </symbol>
+    </svg>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 16 16"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="filter__icon" width="16" height="16">
+        <path
+          d="M2.99999 2H13L7.98999 8.3L2.99999 2ZM0.249995 1.61C2.26999 4.2 5.99999 9 5.99999 9V15C5.99999 15.55 6.44999 16 6.99999 16H9C9.55 16 10 15.55 10 15V9C10 9 13.72 4.2 15.74 1.61C16.25 0.95 15.78 0 14.95 0H1.03999C0.209995 0 -0.260005 0.95 0.249995 1.61Z"
+        />
+      </symbol>
+    </svg>
+
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 20 20"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="cancel__contracts" width="20" height="20">
+        <path
+          d="M10 0C4.47 0 0 4.47 0 10C0 15.53 4.47 20 10 20C15.53 20 20 15.53 20 10C20 4.47 15.53 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM13.59 5L10 8.59L6.41 5L5 6.41L8.59 10L5 13.59L6.41 15L10 11.41L13.59 15L15 13.59L11.41 10L15 6.41L13.59 5Z"
+         
+        />
+      </symbol>
+    </svg>
+
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 20 20"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="save__contracts" width="20" height="20">
+        <path
+          d="M14 0H2C0.89 0 0 0.9 0 2V16C0 17.1 0.89 18 2 18H16C17.1 18 18 17.1 18 16V4L14 0ZM16 16H2V2H13.17L16 4.83V16ZM9 9C7.34 9 6 10.34 6 12C6 13.66 7.34 15 9 15C10.66 15 12 13.66 12 12C12 10.34 10.66 9 9 9ZM3 3H12V7H3V3Z"
+        
+        />
+      </symbol>
+    </svg>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 16 4"
+      id=""
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="dot__icon">
+        <path d="M14 0C15.1 0 16 0.9 16 2C16 3.1 15.1 4 14 4C12.9 4 12 3.1 12 2C12 0.9 12.9 0 14 0ZM8 4C6.9 4 6 3.1 6 2C6 0.9 6.9 0 8 0C9.1 0 10 0.9 10 2C10 3.1 9.1 4 8 4ZM2 4C0.9 4 0 3.1 0 2C0 0.9 0.9 0 2 0C3.1 0 4 0.9 4 2C4 3.1 3.1 4 2 4Z"  />
+      </symbol>
+    </svg>
+
+    <script src="/scripts/tasksscript.js"></script>
+  </body>
+</html>

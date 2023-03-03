@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/register.css" />
+  </head>
+  <body>
+    <main class="register">
+      <div class="register__background-image">
+        <div class="header">
+          <svg class="register__netcracker-logo">
+            <use xlink:href="#netcracker-logo"></use>
+          </svg>
+          <p class="register__netcracker-text">Cloud BSS</p>
+        </div>
+      </div>
+      <div class="register-form">
+        <h1 class="register-form__feature-tester">Feature Tester</h1>
+        <div class="register-form__form-content">
+          <form action="login.html">
+            <h2 class="register__header">Register</h2>
+            <div class="register__register-field">
+              <label for="email">Email</label>
+              <input id="email" type="email" />
+            </div>
+            <div class="register__register-field">
+              <label for="name">Name</label>
+              <input id="name" type="text" />
+            </div>
+            <div class="register__register-field">
+              <label for="surname">Surname</label>
+              <input id="surname" type="text" />
+            </div>
+            <div class="register__register-field">
+              <label for="username">User Name</label>
+              <input id="username" type="text" />
+            </div>
+            <div class="register__register-field">
+              <label for="password">Password</label>
+              <input id="password" type="password" />
+            </div>
+            <div class="register__register-field">
+              <label for="confirmpassword">Confirm Password</label>
+              <input id="confirmpassword" type="password" />
+            </div>
+            <div class="submit-button">
+              <button type="submit">Submit</button>
+            </div>
+            <div class="form-extra">
+              <p class="form-extra__forgot-password">
+                Forgot your password
+                <a class="account-link" href="#">Reset it.</a>
+              </p>
+              <p class="form-extra__create-account">
+                Don't have an account?
+                <a class="account-link" href="#"> Register</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <svg
+      class="svg__hidden"
+      viewBox="0 0 56 36"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="netcracker-logo" width="56" height="36">
+        <path
+          d="M24.8702 13.3026C24.1984 11.5593 21.8356 11.5593 21.1638 13.3026L12.3847 36H17.0318L23.0226 20.5213L27.6361 32.4433C28.1176 33.6835 29.2709 34.5024 30.5587 34.5024C31.3873 34.5024 32.1488 34.1631 32.7199 33.6016L24.8702 13.3026ZM23.0114 10.4946C24.4223 10.4946 25.6653 11.3721 26.2028 12.741L33.6493 31.9987L35.9672 25.9967L30.1892 11.0679C29.0022 7.9909 26.1804 6.00195 23.0114 6.00195C19.8424 6.00195 17.0206 7.9909 15.8336 11.0679L6.19236 35.9883H10.8394L19.8312 12.7293C20.3575 11.3721 21.6117 10.4946 23.0114 10.4946ZM23.0114 4.49269C26.7738 4.49269 30.1108 6.84433 31.5217 10.4946L36.7399 23.9844L39.0578 17.9824L35.5081 8.80988C33.4365 3.45141 28.5319 0 23.0002 0C17.4685 0 12.5639 3.46311 10.4923 8.80988L0 35.9883H4.64707L14.5123 10.4829C15.912 6.84433 19.2601 4.49269 23.0114 4.49269ZM46.7059 2.23464L34.8138 32.9932C34.1084 34.8066 32.4287 35.9883 30.5587 35.9883H38.106C41.0286 35.9883 43.6713 34.128 44.7575 31.2967L56 2.23464H46.7059Z"
+          fill="white"
+        />
+      </symbol>
+    </svg>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,100;1,200;1,300&display=swap");
+html {
+  margin: 0 auto;
+}
+body {
+  border: 1px solid black;
+  overflow: hidden;
+}
+.register {
+  display: flex;
+}
+.register__netcracker-logo {
+  height: 36px;
+  width: 56px;
+}
+.register__background-image {
+  flex-basis: 63%;
+  background: url(/images/backgroundimage.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  padding: 32px;
+}
+.register-form {
+  flex-basis: 35%;
+  padding: 32px;
+  font-family: poppins;
+  color: #3498db;
+  font-weight: 600;
+
+  text-align: right;
+}
+.register-form__feature-tester {
+  font-size: 40px;
+}
+
+.register__netcracker-text {
+  padding-left: 20px;
+  font-size: 40px;
+  display: inline-block;
+  font-family: poppins;
+  color: white;
+  font-weight: 600;
+}
+.register__header {
+  font-size: 28px;
+  color: #323c47;
+  text-align: center;
+}
+.register__register-field {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+}
+label {
+  text-align: left;
+  font-size: 11px;
+  color: #7f8c8d;
+  padding-bottom: 4px;
+}
+.submit-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.register-form__form-content {
+  width: 302px;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -60%);
+}
+button {
+  width: 122px;
+  padding: 8px 0;
+  font-size: 13px;
+  background-color: #3498db;
+  border: 1px solid #2980b9;
+  border-radius: 4px;
+  color: white;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+.form-extra {
+  font-size: 13px;
+  color: black;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 16px;
+}
+
+.account-link {
+  color: #3498db;
+}
+.form-extra__create-account {
+  padding-top: 5px;
+}
+input:focus {
+  outline: none;
+}
